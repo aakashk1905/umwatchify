@@ -44,7 +44,7 @@ const Mentor = () => {
 
     const fetchVideos = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/v1/videos");
+        const response = await axios.get("https://api.upskillmafia.com/api/v1/videos");
         const videos = decryptData(response.data.data);
         setVideos(videos.videos);
       } catch (error) {
@@ -69,7 +69,7 @@ const Mentor = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/v1/video/add`,
+        `https://api.upskillmafia.com/api/v1/video/add`,
         { lec: lectureNumber, link: videoLink }
       );
       if (response.data.success) {
@@ -198,7 +198,7 @@ const TextInput = React.forwardRef((props, ref) => {
 const handleSave = async (values, toast) => {
   try {
     const response = await axios.put(
-      `http://localhost:4000/api/v1/video/edit`,
+      `https://api.upskillmafia.com/api/v1/video/edit`,
       values
     );
     if (response.data.success) {

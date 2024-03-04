@@ -24,7 +24,7 @@ const Watchit = () => {
 
     const fetchVideos = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/v1/videos");
+        const response = await axios.get("https://api.upskillmafia.com/api/v1/videos");
         const videos = decryptData(response.data.data);
         const index = videos.videos.findIndex((v) => v.lec.toLowerCase() === id.toLowerCase());
         if (index !== -1) {
