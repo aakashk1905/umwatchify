@@ -1,4 +1,2 @@
-<IfModule mod_headers.c>
-  Header always append X-Frame-Options "DENY"
-  Header always set Content-Security-Policy "frame-ancestors 'none'"
-</IfModule>
+Header always append X-Frame-Options "DENY"
+Header always set Content-Security-Policy "frame-ancestors 'none'"
